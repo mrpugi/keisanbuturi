@@ -1,16 +1,14 @@
 program mysqrt
 
   implicit none
-  integer::n,i
+  integer::n=100,i
   real::x,ymin,xmin,a,dx
 
   print*,"Let's get min f(x)=x^2-a=0"
   print*,"Please input a"
   read*,a
-  print*,"Please input n(n is seido)(stop n<1)"
-  read*,n
-  if(n<1) stop "n ga dame"
-  dx=2*sqrt(a)/n
+  
+  dx=a/n
   xmin=0
   ymin=f(0.0,a)**2
   do i=0,n
